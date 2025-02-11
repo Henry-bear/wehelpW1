@@ -12,6 +12,7 @@ ___
 ```sql
 -- 建立 website 資料庫
 CREATE DATABASE website;
+SHOW DATABASES;
 ```
 <img width="643" alt="creat-database" src="https://github.com/user-attachments/assets/a957efe5-ff0f-48e7-ae08-b2168e6f501e" />
 
