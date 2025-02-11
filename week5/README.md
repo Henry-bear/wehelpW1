@@ -166,16 +166,16 @@ FOREIGN KEY (member_id) REFERENCES member(id)
 
 * INSERT Sample data
 ```sql
--- 插入 範例資料 到 message 資料表，member_id 由子查詢獲取對應的 member 資料表中的 id
+-- 插入範例資料到 message 資料表，member_id 由子查詢獲取對應的 member 資料表中的 id
 INSERT INTO message (member_id, content, like_count)
 VALUES
-((SELECT id FROM member WHERE username = 'henry1107'), 'Hello from Henry!', 10),
-((SELECT id FROM member WHERE username = 'cundi520'), 'Hello from Cundi!', 20),
-((SELECT id FROM member WHERE username = 'tom8787'), 'Hello from Tom!', 30),
-((SELECT id FROM member WHERE username = 'alex3838'), 'Hello from Alex!', 5),
-((SELECT id FROM member WHERE username = 'test'), 'Hello from Test!', 15);
+((SELECT id FROM member WHERE username = 'henry1107'), 'Hi, I\'m Henry.', 10),
+((SELECT id FROM member WHERE username = 'cundi520'), 'Cundi is me!', 20),
+((SELECT id FROM member WHERE username = 'tom8787'), 'Tom Tom who lu who lu', 30),
+((SELECT id FROM member WHERE username = 'alex3838'), 'Alex not alice.', 5),
+((SELECT id FROM member WHERE username = 'test'), 'Test 001.', 15);
 ```
-<img width="718" alt="insertsampledata" src="https://github.com/user-attachments/assets/cf301b09-dbb9-4809-b83a-5a9ca6dfbfd6" />
+<img width="650" alt="insertmessage" src="https://github.com/user-attachments/assets/7a4ccf1f-98b7-43bc-9de0-2d67d70f8917" />
 
 
 * SELECT all messages, including sender names. We have to JOIN the member table to get that.
@@ -185,7 +185,7 @@ SELECT message.*, member.name AS sender_name
 FROM message
 JOIN member ON message.member_id = member.id;
 ```
-<img width="720" alt="join" src="https://github.com/user-attachments/assets/b356b619-4bf6-4e64-be81-9566cd8fe64a" />
+<img width="750" alt="task5-1" src="https://github.com/user-attachments/assets/7ce67fd3-9c42-4c74-bf59-6e4abaa1d1d7" />
 
 
 * SELECT all messages, including sender names, where sender username equals to test. We have to JOIN the member table to filter and get that.
@@ -196,7 +196,8 @@ FROM message
 JOIN member ON message.member_id = member.id
 WHERE member.username = 'test';
 ```
-<img width="721" alt="joinwhere" src="https://github.com/user-attachments/assets/7e7e8ac2-a4a7-4383-82d2-e18542272dd9" />
+<img width="747" alt="task5-2" src="https://github.com/user-attachments/assets/a3caf6df-41b6-4221-92d6-a6ef6399479d" />
+
 
 
 * Use SELECT, SQL Aggregation Functions with JOIN statement, get the average like count of messages where sender username equals to test.
