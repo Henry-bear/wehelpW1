@@ -75,7 +75,7 @@ SELECT * FROM member ORDER BY time DESC;
 of time. Note: it does not mean SELECT rows where id are 2, 3, or 4.
 ```sql
 -- 按照 time 欄位的降序排序，查詢 member 資料表中的 第 2 到 第 4 行 資料
-SELECT * FROM member ORDER BY time LIMIT 3 OFFSET 1;
+SELECT * FROM member ORDER BY time DESC LIMIT 3 OFFSET 1;
 ```
 <img width="711" alt="Limit" src="https://github.com/user-attachments/assets/869909ba-1db1-4a03-a001-0ed557db42f6" />
 
