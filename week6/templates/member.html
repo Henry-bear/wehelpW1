@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 會員註冊留言系統</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='main.css') }}">
+</head>
+
+<body>
+    <nav>登入成功，歡迎光臨會員頁面！</nav>
+    <div class="login-container">
+        <!-- memberForm -->
+        <br>
+        <h2>{{name}}{{message}}</h2>
+        <form action="/signout" method="get">
+            <button type="submit">登出</button>
+        </form>
+        <!-- memberForm -->
+        <!-- messageForm -->
+        <h2>快來留言吧</h2>
+        <form action="/createMessage" method="post">
+            <div class="form-group">
+                <label for="content">內容</label>
+                <input type="text" id="content" name="content">
+            </div>
+            <button type="submit">送出</button>
+        </form>
+
+        <!-- messageForm -->
+        <!-- 顯示留言內容 -->
+        <h2>留言內容</h2>
+        <div class="messages">
+            <div class="messages">
+                {% for message in messages %}
+                <div class="message">
+                    {{ message.member.name }}: {{ message.content }}
+                    {% if message.member_id == user_id %}
+                    <button onclick="confirmDelete('{{ message.id }}')">X</button>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- 顯示留言內容 -->
+        <!-- 刪除訊息表單 -->
+        <form id="deleteMessageForm" action="/deleteMessage" method="post" style="display: none;">
+            <input type="hidden" id="deleteMessageId" name="message_id">
+        </form>
+        <!-- 刪除訊息表單 -->
+    </div>
+
+    <script>
+        // 確認刪除訊息函式
+        function confirmDelete(messageId) {
+            if (confirm("確定要刪除這條留言嗎？")) {
+                document.getElementById("deleteMessageId").value = messageId;
+                document.getElementById("deleteMessageForm").submit();
+            }
+        }
+    </script>
+</body>
+
+</html>

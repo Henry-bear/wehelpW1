@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeHelp Week 1</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="left">My Website</div>
+        <div class="mid"><img class="bg-btn" id="bgBtn" src="./bgicon.png" alt=""></div>
+        <div class="right" id="menu">
+            <div><img class="off-btn" id="off" src="./cross.png" alt=""></div>
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+        </div>
+    </div>
+    <div class="welcome">
+        Welcome to MyHome
+    </div>
+    <div class="frame">
+        <div class="container">
+            <div class="small-box">
+                <div><img src="./bear.jpg" alt="">Promotion 1</div>
+                <div><img src="./bear.jpg" alt="">Promotion 2</div>
+                <div class="p3"><img src="./bear.jpg" alt="">Promotion 3</div>
+            </div>
+            <div class="big-box">
+                <div>
+                    <img class="star-img" src="./star.png" alt="">
+                    <span class="text1">Title 1</span>
+                </div>
+                <div>
+                    <img class="star-img" src="./star.png" alt="">
+                    <span class="text">Title 2</span>
+                </div>
+                <div>
+                    <img class="star-img" src="./star.png" alt="">
+                    <span class="text">Title 3</span>
+                </div>
+                <div>
+                    <img class="star-img" src="./star.png" alt="">
+                    <span class="text">Title 4</span>
+                </div>
+                <div>
+                    <img class="star-img" src="./star.png" alt="">
+                    <span class="text">Title 5</span>
+                </div>
+                <div>
+                    <img class="star-img" src="./star.png" alt="">
+                    <span class="text">Title 6</span>
+                </div>
+                <div>
+                    <img class="star-img" src="./star.png" alt="">
+                    <span class="text">Title 7</span>
+                </div>
+                <div>
+                    <img class="star-img" src="./star.png" alt="">
+                    <span class="text">Title 8</span>
+                </div>
+                <div class="p9">
+                    <img class="star-img" src="./star.png" alt="">
+                    <span class="text">Title 9</span>
+                </div>
+                <div class="p10">
+                    <img class="star-img" src="./star.png" alt="">
+                    <span class="text">Title 10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 建立按鈕功能
+        function creatBtnElem() {
+            return {
+                show: function (elem) {
+                    menu.classList.toggle("right-show")
+                },
+                off: function (elem) {
+                    menu.classList.toggle("right-show")
+                }
+            }
+        }
+        let BtnElem = creatBtnElem();
+        // 建立點擊事件
+        let creatBtn = (bg, item, off) => {
+            return {
+                bg: document.querySelector("#bgBtn"),
+
+                off: document.querySelector("#off")
+            }
+        }
+        let Btn = creatBtn();
+
+        Btn.bg.addEventListener("click", BtnElem.show)
+        Btn.off.addEventListener("click", BtnElem.off)
+    </script>
+</body>
+
+</html>
