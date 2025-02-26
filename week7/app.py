@@ -222,7 +222,7 @@ def get_member(
     db: Session = Depends(get_db)
 ):
     if not session.get("SIGNED-IN"): # 阻止使用者直接連線 /api/member ，如果未登入則顯示錯誤 401
-        return JSONResponse(content={"error": "Unauthorized"}, status_code=401)
+        return JSONResponse(content={"data": None}, status_code=401)
     # 查詢會員帳號 (username)，例外處理
     try:
         if username:
