@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 會員查詢系統</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='main.css') }}">
+</head>
+
+<body>
+    <nav>登入成功，歡迎光臨會員頁面！</nav>
+    <div class="login-container">
+        <!-- memberForm -->
+        <br>
+        <h2>{{name}}{{message}}</h2>
+        <form action="/signout" method="get">
+            <button type="submit">登出</button>
+        </form>
+        <!-- memberForm -->
+        <!-- messageForm -->
+        <h2>快來留言吧</h2>
+        <form action="/createMessage" method="post">
+            <div class="form-group">
+                <label for="content">內容</label>
+                <input type="text" id="content" name="content">
+            </div>
+            <button type="submit">送出</button>
+        </form>
+
+        <!-- messageForm -->
+        <!-- 顯示留言內容 -->
+        <h2>留言內容</h2>
+        <div class="messages">
+            <div class="messages">
+                {% for message in messages %}
+                <div class="message">
+                    {{ message.member.name }}: {{ message.content }}
+                    {% if message.member_id == user_id %}
+                    <button onclick="confirmDelete('{{ message.id }}')">X</button>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- 顯示留言內容 -->
+        <!-- 刪除訊息表單 -->
+        <form id="deleteMessageForm" action="/deleteMessage" method="post" style="display: none;">
+            <input type="hidden" id="deleteMessageId" name="message_id">
+        </form>
+        <!-- 刪除訊息表單 -->
+        <!-- 會員查詢系統 -->
+        <h2>查詢會員姓名</h2>
+        <input type="text" id="query-username" placeholder="請輸入帳號">
+        <button onclick="queryMember()">查詢</button>
+        <div id="query-result"></div>
+        <!-- 會員查詢系統 -->
+        <!-- 姓名更新系統 -->
+        <h2>更新我的姓名</h2>
+        <input type="text" id="new-name" placeholder="輸入新的姓名">
+        <button onclick="updateName()">更新</button>
+        <div id="update-result"></div>
+        <!-- 姓名更新系統 -->
+    </div>
+
+    <script>
+        // 確認刪除訊息函式
+        function confirmDelete(messageId) {
+            if (confirm("確定要刪除這條留言嗎？")) {
+                document.getElementById("deleteMessageId").value = messageId;
+                document.getElementById("deleteMessageForm").submit();
+            }
+        }
+        // 查詢姓名函式 (對應 FastAPI /api/member GET route)
+        async function queryMember() {
+            // 取得使用者輸入的 username
+            const username = document.getElementById("query-username").value;
+            // 發送 GET 請求到 /api/member，查詢該會員是否存在
+            const response = await fetch(`/api/member?username=${username}`);
+            // 解析回應為 JSON 格式
+            const data = await response.json();
+            // 選取顯示查詢結果的 HTML 元素
+            const resultDiv = document.getElementById("query-result");
+            // 如果找到會員，顯示會員姓名與帳號
+            if (data.data) {
+                resultDiv.innerHTML = `
+                <p> ${data.data.name} (${data.data.username})</p>
+                `;
+                // 如果查無會員，顯示錯誤訊息
+            } else {
+                resultDiv.innerHTML = `<p>查無此會員</p>`;
+            }
+        }
+        // 更新姓名函式  (對應 FastAPI  /api/member PATCH route)
+        async function updateName() {
+            // 取得使用者輸入的新姓名
+            const newName = document.getElementById("new-name").value;
+            // 發送 PATCH 請求到 /api/member，請求更新會員姓名
+            const response = await fetch("/api/member", {
+                method: "PATCH",                        // 使用 PATCH 方法更新資料
+                headers: {
+                    "Content-Type": "application/json"  // 告知後端請求內容是 JSON 格式
+                },
+                body: JSON.stringify({ name: newName }) // 傳遞新的姓名作為請求內容
+            });
+            // 解析回應為 JSON 格式
+            const data = await response.json();
+            // 選取顯示更新結果的 HTML 元素
+            const updateResultDiv = document.getElementById("update-result");
+            // 如果回應包含 {ok: true}，代表更新成功
+            if (data.ok) {
+                updateResultDiv.innerHTML = `<p>更新成功</p>`
+                // 否則，顯示更新失敗訊息
+            } else {
+                updateResultDiv.innerHTML = `<p>更新失敗</p>`
+            }
+        }
+    </script>
+</body>
+
+</html>

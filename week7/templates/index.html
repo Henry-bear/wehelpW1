@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 會員查詢系統</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='main.css') }}">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav>歡迎光臨，請輸入帳號密碼</nav>
+    <!-- navbar -->
+    <div class="login-container">
+        <!-- signUpForm -->
+        <h2>註冊帳號</h2>
+        <form action="/signup" method="post">
+            <div class="form-group">
+                <label for="name">姓名</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="username">帳號</label>
+                <input type="text" id="username" name="username">
+            </div>
+            <div class="form-group">
+                <label for="password">密碼</label>
+                <input type="text" id="password" name="password">
+            </div>
+            <button type="sumbit">註冊</button>
+        </form>
+        <!-- signUpForm -->
+        <!-- loginForm -->
+        <h2>登入系統</h2>
+        <form action="/signin" method="post">
+            <div class="form-group">
+                <label for="username">帳號</label>
+                <input type="text" id="username" name="username" placeholder="請輸入帳號">
+            </div>
+            <div class="form-group">
+                <label for="password">密碼</label>
+                <input type="password" id="password" name="password" placeholder="請輸入密碼">
+            </div>
+            <button type="submit">登入</button>
+        </form>
+        <!-- loginForm -->
+
+
+    </div>
+    <script>
+        // ----------------------Task 1~4  login system -----------------------------
+
+        // 找到 form 表單 並且綁定 submit 事件監聽，執行 validateForm() 函式
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll("form").forEach(function (form) {
+                form.addEventListener("submit", function (event) {
+                    validateForm(event, form);
+                });
+            });
+        });
+
+        // 驗證表單是否有未填寫的欄位
+        function validateForm(event, form) {
+            let isValid = true;
+            form.querySelectorAll("input").forEach(function (input) {
+                if (input.value.trim() === "") {
+                    isValid = false;
+                    alert(input.previousElementSibling.textContent + "不能為空白");
+                }
+            });
+            // 假設是空白 阻止表單提交
+            if (!isValid) {
+                event.preventDefault();
+            }
+        }
+    </script>
+</body>
+
+</html>
