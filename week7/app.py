@@ -231,9 +231,9 @@ def get_member(
             if user:
              return JSONResponse(content={"data": {"id": user.id, "name": user.name, "username": user.username}})
         return JSONResponse(content={"data": None})
-    except SQLAlchemyError as e:
+    except SQLAlchemyError:
         # SQL 錯誤時顯示 500
-        return JSONResponse(content={"error": str(e)}, status_code=500)
+        return JSONResponse(content={"data": None}, status_code=500)
 
 # 姓名更新 API (PATCH)
 @app.patch("/api/member")
@@ -260,9 +260,9 @@ def update_member_name(
             session["NAME"] = new_name  # 更新 session 資訊
             return JSONResponse(content={"ok": True})                  # 前端 if (data.ok)
         return JSONResponse(content={"error": True}, status_code=400)  # 前端 if (!data.ok)
-    except SQLAlchemyError as e:
+    except SQLAlchemyError:
         # SQL 錯誤時顯示 500
-        return JSONResponse(content={"error": str(e)}, status_code=500) 
+        return JSONResponse(content={"error": True}, status_code=500) 
 
 # 設定靜態文件路徑 (main.css)
 app.mount("/static", StaticFiles(directory="static"), name="static")
