@@ -7,7 +7,7 @@ Follow learning steps below to prepare your report:
 
 1. What happens If we add a defer attribute to a <script> tag?  
 >`如果我們在 <script> 標籤中加入 defer 屬性，會發生什麼？`
-當 script 標籤帶有 defer 屬性時，瀏覽器會先下載該腳本，但等到 HTML 文檔完全解析完畢後才執行。
+* 當 script 標籤帶有 defer 屬性時，瀏覽器會先下載該腳本，但等到 HTML 文檔完全解析完畢後才執行。
 這樣可以確保 JavaScript 只在 DOM 樹準備好之後執行，不會影響 HTML 解析過程。
 
 * 特性：
