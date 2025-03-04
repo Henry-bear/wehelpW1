@@ -1,5 +1,5 @@
-# Task 1
-**Topic 1: HTML <script> Attributes**
+# Topic 1
+**HTML <script> Attributes**
 
 * There are 2 attributes, defer and async, that we can use in <script> tag to change the script loading and executing behavior.
 Follow learning steps below to prepare your report:
@@ -12,8 +12,8 @@ Follow learning steps below to prepare your report:
 
 ___
 
-# Task 2
-**Topic 2: CSS Selector Naming**
+# Topic 2
+**CSS Selector Naming**
 
 * OOCSS, SMACSS, and BEM are 3 common naming guidelines for CSS Selector. These
 guidelines help us write more readable CSS code.
@@ -27,8 +27,8 @@ For example, you can demo how to apply the OOCSS naming guideline to the CSS cod
 
 
 
-# Task 3
-**Topic 3: Fetch and CORS**
+# Topic 3
+**Fetch and CORS**
 
 * Using built-in JavaScript fetch function, we can send HTTP requests to the back-end and get HTTP responses without refreshing or redirecting the page. Cross Origin Resource Sharing (CORS) concept plays a critical role if we want to send a request to a different domain with the fetch function.
 
@@ -46,7 +46,7 @@ step 3. Could you give us an example?
 ___
 
 # Task 4
-**Task 4: Connection Pool**
+**Connection Pool**
 
 * The standard procedure to work with databases is: connect, execute SQL statements, and finally close the connection. Connection Pool is a programming technique to make the connection between back-end system and database more stable, and increase overall throughput.
 
@@ -60,7 +60,7 @@ Follow learning steps below to prepare your report:
 ___
 
 # Task 5
-**Task 5: Cross-Site Scripting (XSS)**
+**Cross-Site Scripting (XSS)**
 
 * Cross-Site Scripting (XSS) is one of the most common attack methods. Try to study the basic concept, replicate the attack steps, and tell us how to prevent this kind of attack from the developer’s view.
 
