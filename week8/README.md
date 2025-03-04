@@ -33,6 +33,15 @@ Follow learning steps below to prepare your report:
 
 2. What happens If we add an async attribute to a <script> tag?  
 >`如果我們在 <script> 標籤中加入 async 屬性，會發生什麼？`
+>`當 script 標籤帶有 async 屬性時，瀏覽器會異步下載該腳本，並且在下載完成後立即執行，不會等待 HTML 完全解析。這可能會導致腳本執行順序變得不確定。`
+
+**特性：**
+
+- 腳本會與 HTML 解析同步下載，但下載完成後會立即執行（可能會暫停 HTML 解析）。
+- 多個 async 腳本的執行順序無法保證，取決於哪個腳本先下載完成。
+- 只能用於外部腳本 (<script src="..." async></script>)，不能用於內聯腳本。
+適合情境：當 JavaScript 不依賴 DOM 結構，也不需要與其他腳本保持執行順序時（例如，載入廣告、分析工具、第三方 API）。
+
 3. When to use these 2 attributes? Could you give us code examples to illustrate the use cases for these 2 attributes?  
 >`何時使用這兩個屬性？使用場景與代碼示例`
 
