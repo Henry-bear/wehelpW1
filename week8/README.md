@@ -1,10 +1,10 @@
 # Topic 1
 **HTML <script> Attributes**
 
-==There are 2 attributes, defer and async, that we can use in <script> tag to change the script loading and executing behavior.
-Follow learning steps below to prepare your report:==
+* There are 2 attributes, defer and async, that we can use in <script> tag to change the script loading and executing behavior.
+Follow learning steps below to prepare your report:
 
-1. What happens If we add a defer attribute to a <script> tag?
+1. What happens If we add a defer attribute to a <script> ==tag==?
 
 2. What happens If we add an async attribute to a <script> tag?
 
