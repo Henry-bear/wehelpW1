@@ -1,222 +1,71 @@
 # Task 1
-**Install MySQL server**
+**Topic 1: HTML <script> Attributes**
 
-<img width="350" alt="MySQL" src="https://github.com/user-attachments/assets/bc159e7d-41fd-4366-9da6-4f37a64b9844" />
+* There are 2 attributes, defer and async, that we can use in <script> tag to change the script loading and executing behavior.
+Follow learning steps below to prepare your report:
+1.What happens If we add a defer attribute to a <script> tag?
+
+2.What happens If we add an async attribute to a <script> tag?
+
+3.When to use these 2 attributes? Could you give us code examples to illustrate the use cases for these 2 attributes?
 
 ___
 
 # Task 2
-**Create database and table in your MySQL server**
+**Topic 2: CSS Selector Naming**
 
-**建立 website 資料庫**  
-```sql
--- 建立 website 資料庫
-CREATE DATABASE website;
+* OOCSS, SMACSS, and BEM are 3 common naming guidelines for CSS Selector. These
+guidelines help us write more readable CSS code.
 
-SHOW DATABASES;
-```
-<img width="643" alt="creat-database" src="https://github.com/user-attachments/assets/a957efe5-ff0f-48e7-ae08-b2168e6f501e" />
+Follow learning steps below to prepare your report:
+1.Introduce the concepts of OOCSS, SMACSS, and BEM naming guidelines.
 
-**建立 member 資料表**  
-```sql
--- 建立 member 資料表，包含欄位：id、name、username、password、follower_count 和 time
-CREATE TABLE member (
-    -> id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    -> name VARCHAR(255) NOT NULL,
-    -> username VARCHAR(255) NOT NULL,
-    -> password VARCHAR(255) NOT NULL,
-    -> follower_count INT UNSIGNED NOT NULL DEFAULT 0,
-    -> time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
-    -> );
-```
-<img width="502" alt="creat-table-member" src="https://github.com/user-attachments/assets/9d29ba54-cfb3-4e97-9676-edd57e821a6c" />
+2.Tell us which naming guideline is your favorite, and give an example to demonstrate the main concept of that guideline. 
+For example, you can demo how to apply the OOCSS naming guideline to the CSS code in our week 1 tasks.
 
-* member 資料表資訊 
-<img width="714" alt="describe-member" src="https://github.com/user-attachments/assets/2a7db469-90a0-4f7f-946f-fd7e03b072b1" />
 
-___
 
 # Task 3
-**SQL CRUD （建立、刪除、查詢、更新）**
+**Topic 3: Fetch and CORS**
 
-* INSERT a new row to the member table where name, username and password must
-be set to test. INSERT additional 4 rows with arbitrary data.
-```sql
--- 插入一筆資料到 member 資料表，其中 name、username 和 password 都設置為 'test'
-INSERT INTO member (name, username, password)
-    -> VALUES ('test', 'test', 'test');
--- 插入另外四筆資料到 member 資料表，其中包含任意的資料
-INSERT INTO member (name, username, password, follower_count)
-    -> VALUES
-    -> ('Henry', 'henry1107', '123456', 999),
-    -> ('Cundi', 'cundi520', '654321', 888),
-    -> ('Tom', 'tom8787', '87654321', 666),
-    -> ('Alex', 'alex3838', 'password', 100);
-```
-<img width="550" alt="tesk3 1-1" src="https://github.com/user-attachments/assets/06e13ccf-d9a5-43b8-9dac-911921e0ce3c" />
-<img width="707" alt="task3 1" src="https://github.com/user-attachments/assets/018a0514-4553-44b6-847f-a162de4f5bf6" />
+* Using built-in JavaScript fetch function, we can send HTTP requests to the back-end and get HTTP responses without refreshing or redirecting the page. Cross Origin Resource Sharing (CORS) concept plays a critical role if we want to send a request to a different domain with the fetch function.
 
+Follow learning steps below to prepare your report:
+1. What is CORS?
 
-* SELECT all rows from the member table.
-```sql
--- 查詢 member 資料表中的所有資料
-SELECT * FROM member;
-```
-<img width="715" alt="member" src="https://github.com/user-attachments/assets/57888cf9-4707-48ea-ba68-87bf68034aca" />
+2. Can we use the fetch function in our localhost page, to send a request to https://www.google.com/ and get a response?
 
-* SELECT all rows from the member table, in descending order of time.
-```sql
--- 按照 time 欄位的降序排序，查詢 member 資料表中的所有資料
-SELECT * FROM member ORDER BY time DESC;
-```
-<img width="715" alt="timeDESC" src="https://github.com/user-attachments/assets/eeca2996-71b8-4d3c-bd40-d5f5c9b2f1d6" />
+3. Can we use the fetch function in our localhost page, to send a request to https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assignment.json and get a response? Compared to the previous case, what’s the difference?
 
-* SELECT total 3 rows, second to fourth, from the member table, in descending order
-of time. Note: it does not mean SELECT rows where id are 2, 3, or 4.
-```sql
--- 按照 time 欄位的降序排序，查詢 member 資料表中的 第 2 到 第 4 行 資料
-SELECT * FROM member ORDER BY time DESC LIMIT 3 OFFSET 1;
-```
-<img width="711" alt="Limit" src="https://github.com/user-attachments/assets/869909ba-1db1-4a03-a001-0ed557db42f6" />
-
-* SELECT rows where username equals to test.
-```sql
--- 查詢 member 資料表中 username 等於 'test' 的所有資料
-SELECT * FROM member WHERE username = 'test';
-```
-<img width="721" alt="user-test" src="https://github.com/user-attachments/assets/9e1bfb43-ab38-4db7-b14f-c01c0a4200a0" />
-
-* SELECT rows where name includes the es keyword.
-```sql
--- 查詢 member 資料表中 name 包含 'es' 關鍵字的所有資料
-SELECT * FROM member WHERE name LIKE '%es%';
-```
-<img width="719" alt="name-es" src="https://github.com/user-attachments/assets/de2f3f4c-3ccb-41df-b857-f967b70f5b7a" />
-
-* SELECT rows where both username and password equal to test.
-```sql
--- 查詢 member 資料表中 username 和 password 都等於 'test' 的所有資料
-SELECT * FROM member WHERE username = 'test' AND password = 'test';
-```
-<img width="714" alt="usernameANDpassword" src="https://github.com/user-attachments/assets/0fcc874f-78cf-4327-a290-0583e06255da" />
-
-* UPDATE data in name column to test2 where username equals to test.
-```sql
--- 更新 member 資料表中 username 等於 'test' 的 name 欄位為 'test2'
-UPDATE member SET name = 'test2' WHERE username = 'test';
-```
-<img width="716" alt="updatename" src="https://github.com/user-attachments/assets/aa09532d-d2d2-4c24-a65f-42f6da4a7aea" />
+4. How to share APIs we developed to other domains, just like what we experienced in
+step 3. Could you give us an example?
 
 ___
 
 # Task 4
-**SQL Aggregation Functions (聚合函數)**
-* SELECT how many rows from the member table.
-```sql
--- 查詢 member 資料表中的總行數
-SELECT COUNT(*) AS total_rows FROM member;
-```
-<img width="694" alt="countRows" src="https://github.com/user-attachments/assets/1d649964-a461-4d60-93f7-cd13b70d1e73" />
+**Task 4: Connection Pool**
 
-* SELECT the sum of follower＿count of all the rows from the member table.
-```sql
--- 查詢 member 資料表中 follower_count 欄位的總和
-SELECT SUM(follower_count) AS total_followers FROM member;
-```
-<img width="715" alt="sumfollower" src="https://github.com/user-attachments/assets/161e2898-940a-4e55-bb1f-16506e7ab2a5" />
+* The standard procedure to work with databases is: connect, execute SQL statements, and finally close the connection. Connection Pool is a programming technique to make the connection between back-end system and database more stable, and increase overall throughput.
 
-* SELECT the average of follower＿count of all the rows from the member table.
-```sql
--- 查詢 member 資料表中 follower_count 欄位的平均值
-SELECT AVG(followers_count) AS average_followers FROM member;
-```
-<img width="716" alt="avgfollowers" src="https://github.com/user-attachments/assets/7c4ee710-b14f-4791-a8f7-d5ea4ac0dea0" />
+Follow learning steps below to prepare your report:
+1. What is Connection Pool? Why do we want to use Connection Pool?
 
-* SELECT the average of follower＿count of the first 2 rows, in descending order of follower_count, from the member table.
-```sql
--- 查詢 member 資料表中 follower_count 欄位的前兩行數據的平均值（按 follower_count 欄位降序排列）
-SELECT AVG(followers_count) AS average_top2_followers
-FROM (
-SELECT follower_count
-FROM member
-ORDER BY follower_count DESC
-LIMIT 2
-) AS top2;
-```
-<img width="608" alt="avgfollowerslimit" src="https://github.com/user-attachments/assets/560efd5b-8f13-4670-b010-6d7502a0d6ed" />
+2. How to create a Connection Pool by the official mysql-connector-python package?
 
+3. If we want to make database operations, we get a connection from Connection Pool, execute SQL statements, and finally return connection back to the Connection Pool.Demo your code which implements the above procedure.
 ___
 
 # Task 5
-**SQL JOIN(合併查詢）**
-* Create a new table named message, in the website database. designed as below:
-```sql
--- 創建 message 資料表，包含欄位：id、member_id、content、like_count 和 time，
--- 並設置 member_id 為 FOREIGN KEY (外鍵)，引用 member 資料表的 id 欄位
-CREATE TABLE message(
-id BIGINT AUTO_INCREMENT PRIMARY KEY,
-member_id BIGINT NOT NULL,
-content VARCHAR(255) NOT NULL,
-like_count INT UNSIGNED NOT NULL DEFAULT 0,
-time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-FOREIGN KEY (member_id) REFERENCES member(id)
-);
-```
-<img width="718" alt="messagetable" src="https://github.com/user-attachments/assets/b6fa5c49-bb8e-4e03-9f85-1abb0a2b6377" />
+**Task 5: Cross-Site Scripting (XSS)**
 
-* INSERT Sample data
-```sql
--- 插入範例資料到 message 資料表，member_id 由子查詢獲取對應的 member 資料表中的 id
-INSERT INTO message (member_id, content, like_count)
-VALUES
-((SELECT id FROM member WHERE username = 'henry1107'), 'Hi, I\'m Henry.', 10),
-((SELECT id FROM member WHERE username = 'cundi520'), 'Cundi is me!', 20),
-((SELECT id FROM member WHERE username = 'tom8787'), 'Tom Tom who lu who lu', 30),
-((SELECT id FROM member WHERE username = 'alex3838'), 'Alex not alice.', 5),
-((SELECT id FROM member WHERE username = 'test'), 'Test 001.', 15);
-```
-<img width="650" alt="insertmessage" src="https://github.com/user-attachments/assets/7a4ccf1f-98b7-43bc-9de0-2d67d70f8917" />
+* Cross-Site Scripting (XSS) is one of the most common attack methods. Try to study the basic concept, replicate the attack steps, and tell us how to prevent this kind of attack from the developer’s view.
+
+Follow learning steps below to prepare your report:
+1. What is XSS?
+
+2. You are a hacker! Design and do a real XSS attack on a web system. Show us your work.
+
+3. Based on the scenario you did in the previous step, how could it be prevented?
 
 
-* SELECT all messages, including sender names. We have to JOIN the member table to get that.
-```sql
--- 查詢所有訊息，包括發送者的名字，使用 JOIN 將 message 資料表與 member 資料表進行連接
-SELECT message.*, member.name AS sender_name
-FROM message
-JOIN member ON message.member_id = member.id;
-```
-<img width="750" alt="task5-1" src="https://github.com/user-attachments/assets/7ce67fd3-9c42-4c74-bf59-6e4abaa1d1d7" />
-
-
-* SELECT all messages, including sender names, where sender username equals to test. We have to JOIN the member table to filter and get that.
-```sql
--- 查詢所有訊息，包括發送者的名字，並選擇發送者的 username 等於 'test' 的資料，使用 JOIN 將 message 資料表與 member 資料表進行連接
-SELECT message.*, member.name AS sender_name
-FROM message
-JOIN member ON message.member_id = member.id
-WHERE member.username = 'test';
-```
-<img width="747" alt="task5-2" src="https://github.com/user-attachments/assets/a3caf6df-41b6-4221-92d6-a6ef6399479d" />
-
-
-
-* Use SELECT, SQL Aggregation Functions with JOIN statement, get the average like count of messages where sender username equals to test.
-```sql
--- 查詢發送者 username 等於 'test' 的資料的 平均 like_count，使用 JOIN 將 message 資料表與 member 資料表進行連接
-SELECT AVG(message.like_count) AS average_like_count
-FROM message
-JOIN member ON message.member_id = member.id
-WHERE member.username = 'test';
-```
-<img width="715" alt="avgjoin" src="https://github.com/user-attachments/assets/098358c3-51d6-45eb-bc7f-69f492ba2780" />
-
-* Use SELECT, SQL Aggregation Functions with JOIN statement, get the average like count of messages GROUP BY sender username.
-```sql
--- 查詢資料的平均 like_count，按照發送者 username 分群，使用 JOIN 將 message 資料表與 member 資料表進行連接
-SELECT member.username, AVG(message.like_count) AS average_like_count
-FROM message
-JOIN member ON message.member_id = member.id
-GROUP BY member.username;
-```
-<img width="719" alt="avggroupby" src="https://github.com/user-attachments/assets/2a2d25dd-5ff0-4d24-ba43-c4509a8f4a49" />
 
