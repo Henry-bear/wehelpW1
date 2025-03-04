@@ -59,6 +59,9 @@ Follow learning steps below to prepare your report:
 
 3. When to use these 2 attributes? Could you give us code examples to illustrate the use cases for these 2 attributes?  
 >`何時使用這兩個屬性？使用場景與代碼示例`
+| 屬性 | 何時使用 | 影響 |
+| :-- | --: |:--:|
+| 置左  | 置右 | 置中 |
 
 
 ___
