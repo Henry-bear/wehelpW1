@@ -16,6 +16,20 @@ Follow learning steps below to prepare your report:
 - 只能用於外部腳本 (<script src="..." defer></script>)，不能用於內聯腳本。
 適合情境：當 JavaScript 需要操作 DOM 時（例如，添加事件監聽器或修改 HTML 結構）。
 
+```html```
+`<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Defer Example</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+</body>
+</html>
+`
+
 2. What happens If we add an async attribute to a <script> tag?  
 >`如果我們在 <script> 標籤中加入 async 屬性，會發生什麼？`
 3. When to use these 2 attributes? Could you give us code examples to illustrate the use cases for these 2 attributes?  
