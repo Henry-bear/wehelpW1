@@ -11,7 +11,7 @@ Follow learning steps below to prepare your report:
 
 3. When to use these 2 attributes? Could you give us code examples to illustrate the use cases for these 2 attributes?
 
-==123==
+
 
 ___
 
