@@ -33,7 +33,7 @@ Follow learning steps below to prepare your report:
 
 2. What happens If we add an async attribute to a <script> tag?  
 >`如果我們在 <script> 標籤中加入 async 屬性，會發生什麼？`
->`當 script 標籤帶有 async 屬性時，瀏覽器會異步下載該腳本，並且在下載完成後立即執行，不會等待 HTML 完全解析。這可能會導致腳本執行順序變得不確定。`
+* 當 script 標籤帶有 async 屬性時，瀏覽器會異步下載該腳本，並且在下載完成後立即執行，不會等待 HTML 完全解析。這可能會導致腳本執行順序變得不確定。
 
 **特性：**
 
