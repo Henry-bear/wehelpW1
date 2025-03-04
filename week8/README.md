@@ -7,6 +7,15 @@ Follow learning steps below to prepare your report:
 
 1. What happens If we add a defer attribute to a <script> tag?  
 >`如果我們在 <script> 標籤中加入 defer 屬性，會發生什麼？`
+當 script 標籤帶有 defer 屬性時，瀏覽器會先下載該腳本，但等到 HTML 文檔完全解析完畢後才執行。
+這樣可以確保 JavaScript 只在 DOM 樹準備好之後執行，不會影響 HTML 解析過程。
+
+* 特性：
+- 腳本會被延遲執行，直到 HTML 解析完畢後才運行。
+- 多個 defer 腳本會按照它們在 HTML 中的出現順序執行（保證執行順序）。
+- 只能用於外部腳本 (<script src="..." defer></script>)，不能用於內聯腳本。
+適合情境：當 JavaScript 需要操作 DOM 時（例如，添加事件監聽器或修改 HTML 結構）。
+
 2. What happens If we add an async attribute to a <script> tag?  
 >`如果我們在 <script> 標籤中加入 async 屬性，會發生什麼？`
 3. When to use these 2 attributes? Could you give us code examples to illustrate the use cases for these 2 attributes?  
