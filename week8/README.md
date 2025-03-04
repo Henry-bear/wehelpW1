@@ -61,6 +61,7 @@ Follow learning steps below to prepare your report:
 >`何時使用這兩個屬性？使用場景與代碼示例`
 
 | 屬性 | 何時使用 | 影響 |
+| :---:|:---:|:---:|
 | defer | 當腳本需要操作 DOM，並且與其他腳本有順序依賴時 |確保 HTML 解析完成後才執行，且保持執行順序|
 | async  | 當腳本不依賴 DOM，也不需要與其他腳本保持順序時 | 下載完成後立即執行，可能影響 HTML 解析 |
 
