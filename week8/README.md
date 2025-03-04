@@ -42,6 +42,20 @@ Follow learning steps below to prepare your report:
 - 只能用於外部腳本 (<script src="..." async></script>)，不能用於內聯腳本。
 適合情境：當 JavaScript 不依賴 DOM 結構，也不需要與其他腳本保持執行順序時（例如，載入廣告、分析工具、第三方 API）。
 
+```html
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Async Example</title>
+    <script src="analytics.js" async></script>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+</body>
+</html>
+```
+`這個例子中，analytics.js（例如 Google Analytics 之類的腳本）會在下載後立即執行，而不會等待 HTML 完全解析。`
 3. When to use these 2 attributes? Could you give us code examples to illustrate the use cases for these 2 attributes?  
 >`何時使用這兩個屬性？使用場景與代碼示例`
 
