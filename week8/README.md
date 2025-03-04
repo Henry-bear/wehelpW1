@@ -4,11 +4,11 @@
 * There are 2 attributes, defer and async, that we can use in <script> tag to change the script loading and executing behavior.
 Follow learning steps below to prepare your report:
 
-1.What happens If we add a defer attribute to a <script> tag?
+1. What happens If we add a defer attribute to a <script> tag?
 
-2.What happens If we add an async attribute to a <script> tag?
+2. What happens If we add an async attribute to a <script> tag?
 
-3.When to use these 2 attributes? Could you give us code examples to illustrate the use cases for these 2 attributes?
+3. When to use these 2 attributes? Could you give us code examples to illustrate the use cases for these 2 attributes?
 
 ___
 
@@ -20,9 +20,9 @@ guidelines help us write more readable CSS code.
 
 Follow learning steps below to prepare your report:
 
-1.Introduce the concepts of OOCSS, SMACSS, and BEM naming guidelines.
+1. Introduce the concepts of OOCSS, SMACSS, and BEM naming guidelines.
 
-2.Tell us which naming guideline is your favorite, and give an example to demonstrate the main concept of that guideline. 
+2. Tell us which naming guideline is your favorite, and give an example to demonstrate the main concept of that guideline. 
 For example, you can demo how to apply the OOCSS naming guideline to the CSS code in our week 1 tasks.
 
 
