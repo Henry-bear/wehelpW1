@@ -10,7 +10,7 @@ Follow learning steps below to prepare your report:
 * 當 script 標籤帶有 defer 屬性時，瀏覽器會先下載該腳本，但等到 HTML 文檔完全解析完畢後才執行。
 這樣可以確保 JavaScript 只在 DOM 樹準備好之後執行，不會影響 HTML 解析過程。
 
-###特性：
+**特性：**
 - 腳本會被延遲執行，直到 HTML 解析完畢後才運行。
 - 多個 defer 腳本會按照它們在 HTML 中的出現順序執行（保證執行順序）。
 - 只能用於外部腳本 (<script src="..." defer></script>)，不能用於內聯腳本。
