@@ -3,6 +3,7 @@
 
 * There are 2 attributes, defer and async, that we can use in <script> tag to change the script loading and executing behavior.
 Follow learning steps below to prepare your report:
+
 1.What happens If we add a defer attribute to a <script> tag?
 
 2.What happens If we add an async attribute to a <script> tag?
@@ -18,6 +19,7 @@ ___
 guidelines help us write more readable CSS code.
 
 Follow learning steps below to prepare your report:
+
 1.Introduce the concepts of OOCSS, SMACSS, and BEM naming guidelines.
 
 2.Tell us which naming guideline is your favorite, and give an example to demonstrate the main concept of that guideline. 
@@ -31,6 +33,7 @@ For example, you can demo how to apply the OOCSS naming guideline to the CSS cod
 * Using built-in JavaScript fetch function, we can send HTTP requests to the back-end and get HTTP responses without refreshing or redirecting the page. Cross Origin Resource Sharing (CORS) concept plays a critical role if we want to send a request to a different domain with the fetch function.
 
 Follow learning steps below to prepare your report:
+
 1. What is CORS?
 
 2. Can we use the fetch function in our localhost page, to send a request to https://www.google.com/ and get a response?
@@ -48,6 +51,7 @@ ___
 * The standard procedure to work with databases is: connect, execute SQL statements, and finally close the connection. Connection Pool is a programming technique to make the connection between back-end system and database more stable, and increase overall throughput.
 
 Follow learning steps below to prepare your report:
+
 1. What is Connection Pool? Why do we want to use Connection Pool?
 
 2. How to create a Connection Pool by the official mysql-connector-python package?
