@@ -3,7 +3,7 @@
 
 * There are 2 attributes, defer and async, that we can use in <script> tag to change the script loading and executing behavior.
 Follow learning steps below to prepare your report:
-在 HTML 中，<script> 標籤有兩個關鍵屬性：defer 和 async，它們會影響 JavaScript 的加載和執行方式
+* 在 HTML 中，<script> 標籤有兩個關鍵屬性：defer 和 async，它們會影響 JavaScript 的加載和執行方式
 
 1. What happens If we add a defer attribute to a <script> tag?
 
