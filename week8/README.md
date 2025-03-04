@@ -55,7 +55,8 @@ Follow learning steps below to prepare your report:
 </body>
 </html>
 ```
-`這個例子中，analytics.js（例如 Google Analytics 之類的腳本）會在下載後立即執行，而不會等待 HTML 完全解析。`
+`這個例子中，analytics.js（例如 Google Analytics 之類的腳本）會在下載後立即執行，而不會等待 HTML 完全解析。`  
+
 3. When to use these 2 attributes? Could you give us code examples to illustrate the use cases for these 2 attributes?  
 >`何時使用這兩個屬性？使用場景與代碼示例`
 
