@@ -29,7 +29,7 @@ Follow learning steps below to prepare your report:
 </body>
 </html>
 ```
-
+>`在這個例子中，script.js 會在 HTML 文檔解析完畢後執行，確保 h1 標籤已經載入，避免 document.querySelector('h1') 找不到元素的問題。`
 
 2. What happens If we add an async attribute to a <script> tag?  
 >`如果我們在 <script> 標籤中加入 async 屬性，會發生什麼？`
