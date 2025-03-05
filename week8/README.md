@@ -282,7 +282,8 @@ Follow learning steps below to prepare your report:
     2. 減少資源消耗：降低資料庫伺服器的負擔，減少連線管理的開銷。  
     3. 增加系統穩定性：避免大量即時連線導致資料庫崩潰或資源耗盡。  
     4. 提高併發能力：允許多個請求共用同一組連線，提高吞吐量。  
-2. How to create a Connection Pool by the official mysql-connector-python package?
+2. How to create a Connection Pool by the official mysql-connector-python package?  
+>`mysql-connector-python 提供了 MySQLConnectionPool 類別來管理連線池，我們可以透過 pool_name 和 pool_size 來設定連線池的名稱和最大連線數。`
 ```python
 import mysql.connector
 from mysql.connector import pooling
@@ -300,7 +301,7 @@ connection_pool = pooling.MySQLConnectionPool(
 print("連線池已建立")
 ```
 
-4. If we want to make database operations, we get a connection from Connection Pool, execute SQL statements, and finally return connection back to the Connection Pool.Demo your code which implements the above procedure.
+3. If we want to make database operations, we get a connection from Connection Pool, execute SQL statements, and finally return connection back to the Connection Pool.Demo your code which implements the above procedure.
 ___
 
 # Task 5
