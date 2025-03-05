@@ -225,8 +225,10 @@ fetch("https://www.google.com/")
 ```  
 >`瀏覽器控制台會出現 CORS policy 錯誤，因為 Google 的伺服器並未允許來自我們本機的請求。`
 
-3. Can we use the fetch function in our localhost page, to send a request to https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assignment.json and get a response? Compared to the previous case, what’s the difference?
-
+3. Can we use the fetch function in our localhost page, to send a request to https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assignment.json and get a response? Compared to the previous case, what’s the difference?  
+>`我們可以在本機端的網頁使用 fetch 函式，向上述網址發送請求並獲取回應嗎？與前一個案例相比，有什麼不同？`  
+>`可以。
+該 URL 屬於 GitHub Pages，並且其伺服器設定了允許跨域存取（CORS headers），所以我們可以成功獲取 JSON 資料。`
 4. How to share APIs we developed to other domains, just like what we experienced in
 step 3. Could you give us an example?
 
