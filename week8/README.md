@@ -90,7 +90,7 @@ guidelines help us write more readable CSS code.
 Follow learning steps below to prepare your report:
 
 1. Introduce the concepts of OOCSS, SMACSS, and BEM naming guidelines.
-* OOCSS（物件導向 CSS，Object-Oriented CSS） 
+* OOCSS（物件導向 CSS，Object-Oriented CSS）  
 OOCSS（物件導向 CSS）是一種將 CSS 組織成可重用組件的命名方式。它的核心思想是分離結構（Structure）與外觀（Skin），這樣可以減少重複代碼並提高可維護性。
 
 * 主要原則：
