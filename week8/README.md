@@ -238,7 +238,8 @@ fetch("https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assi
 4. How to share APIs we developed to other domains, just like what we experienced in
 step 3. Could you give us an example?
 >`如何讓我們開發的 API 允許其他網域存取？請舉例說明。`  
->`如果我們想要讓自己開發的 API 能夠讓其他網域存取（如 GitHub Pages），我們需要在後端的 HTTP 回應標頭中加入 CORS 設定。在 FastAPI 中可以這樣做`
+>`如果我們想要讓自己開發的 API 能夠讓其他網域存取（如 GitHub Pages），我們需要在後端的 HTTP 回應標頭中加入 CORS 設定。`  
+>`在 FastAPI 中可以這樣做`
 ```python
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
