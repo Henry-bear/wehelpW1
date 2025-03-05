@@ -211,8 +211,8 @@ For example, you can demo how to apply the OOCSS naming guideline to the CSS cod
 
 Follow learning steps below to prepare your report:
 
-1. What is CORS?  
-CORS（跨來源資源共享）是一種網頁安全機制，允許瀏覽器向不同來源（不同網域、子網域、通訊協定或連接埠）請求資源。瀏覽器會根據伺服器的回應標頭（Access-Control-Allow-Origin）來決定是否允許請求成功。
+1. What is CORS?   
+>`CORS（跨來源資源共享）是一種網頁安全機制，允許瀏覽器向不同來源（不同網域、子網域、通訊協定或連接埠）請求資源。瀏覽器會根據伺服器的回應標頭（Access-Control-Allow-Origin）來決定是否允許請求成功。`
 
 預設情況下，為了安全性，瀏覽器會限制來自不同來源的 JavaScript 直接存取其他網域的資源。CORS 允許伺服器設定特定的允許來源，從而開放 API 供其他網域存取。
 2. Can we use the fetch function in our localhost page, to send a request to https://www.google.com/ and get a response?
