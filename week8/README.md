@@ -206,7 +206,8 @@ For example, you can demo how to apply the OOCSS naming guideline to the CSS cod
 # Topic 3
 **Fetch and CORS**
 
-* Using built-in JavaScript fetch function, we can send HTTP requests to the back-end and get HTTP responses without refreshing or redirecting the page. Cross Origin Resource Sharing (CORS) concept plays a critical role if we want to send a request to a different domain with the fetch function.
+* Using built-in JavaScript fetch function, we can send HTTP requests to the back-end and get HTTP responses without refreshing or redirecting the page. Cross Origin Resource Sharing (CORS) concept plays a critical role if we want to send a request to a different domain with the fetch function.  
+>`使用 JavaScript 內建的 fetch 函式，我們可以向後端發送 HTTP 請求，並在不重新整理或跳轉頁面的情況下獲取 HTTP 回應。當我們希望使用 fetch 來向不同網域發送請求時，「跨來源資源共享」（Cross-Origin Resource Sharing，CORS）的概念就變得非常重要。`
 
 Follow learning steps below to prepare your report:
 
