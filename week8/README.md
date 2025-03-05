@@ -214,6 +214,16 @@ Follow learning steps below to prepare your report:
 >`CORS（跨來源資源共享）是一種網頁安全機制，允許瀏覽器向不同來源（不同網域、子網域、通訊協定或連接埠）請求資源。瀏覽器會根據伺服器的回應標頭（Access-Control-Allow-Origin）來決定是否允許請求成功。`  
 >`預設情況下，為了安全性，瀏覽器會限制來自不同來源的 JavaScript 直接存取其他網域的資源。CORS 允許伺服器設定特定的允許來源，從而開放 API 供其他網域存取。`
 2. Can we use the fetch function in our localhost page, to send a request to https://www.google.com/ and get a response?
+>`我們可以在本機端的網頁使用 fetch 函式，向 https://www.google.com/ 發送請求並獲取回應嗎？`  
+>`不行`
+>`Google 並未開放 CORS 訪問，因此當我們在本機端使用 fetch 發送請求時，瀏覽器會攔截該請求，並顯示 CORS 錯誤訊息。`
+```javascript
+fetch("https://www.google.com/")
+  .then(response => response.text())
+  .then(data => console.log(data))
+  .catch(error => console.error("Error:", error));
+```  
+>`瀏覽器控制台會出現 CORS policy 錯誤，因為 Google 的伺服器並未允許來自我們本機的請求。`
 
 3. Can we use the fetch function in our localhost page, to send a request to https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assignment.json and get a response? Compared to the previous case, what’s the difference?
 
