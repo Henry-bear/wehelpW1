@@ -84,12 +84,25 @@ ___
 
 * OOCSS, SMACSS, and BEM are 3 common naming guidelines for CSS Selector. These
 guidelines help us write more readable CSS code.
+>`在 CSS 開發中，為了提高可讀性、可維護性，開發者通常會遵循一些命名規範。OOCSS、SMACSS 和 BEM 是三種常見的 CSS 命名方法，幫助我們更有條理地編寫樣式。`
+
 
 Follow learning steps below to prepare your report:
 
 1. Introduce the concepts of OOCSS, SMACSS, and BEM naming guidelines.
+* OOCSS（物件導向 CSS，Object-Oriented CSS）
+概念：
+OOCSS（物件導向 CSS）是一種將 CSS 組織成可重用組件的命名方式。它的核心思想是分離結構（Structure）與外觀（Skin），這樣可以減少重複代碼並提高可維護性。
 
-2. Tell us which naming guideline is your favorite, and give an example to demonstrate the main concept of that guideline. 
+* 主要原則：
+
+1. 分離結構與外觀：
+    結構（Structure）：負責元素的基本佈局，例如 width、margin、padding 等。
+    外觀（Skin）：負責元素的視覺風格，如 background-color、border、box-shadow 等。
+2. 使用可重用的類別：
+    例如，使用 .btn 定義按鈕的結構，使用 .btn-primary、.btn-secondary 來定義不同的樣式，而不是為每個按鈕單獨寫樣式。
+
+3. Tell us which naming guideline is your favorite, and give an example to demonstrate the main concept of that guideline. 
 For example, you can demo how to apply the OOCSS naming guideline to the CSS code in our week 1 tasks.
 
 
