@@ -302,6 +302,50 @@ print("連線池已建立")
 ```
 
 3. If we want to make database operations, we get a connection from Connection Pool, execute SQL statements, and finally return connection back to the Connection Pool.Demo your code which implements the above procedure.
+* 如何使用連線池來進行資料庫操作？  
+    1. 從連線池獲取連線
+    2. 執行 SQL 查詢
+    3. 將連線歸還至連線池
+```python
+import mysql.connector
+from mysql.connector import pooling
+
+# 創建連線池
+connection_pool = pooling.MySQLConnectionPool(
+    pool_name="mypool",
+    pool_size=5,
+    host="localhost",
+    user="root",
+    password="yourpassword",
+    database="yourdatabase"
+)
+
+def execute_query(query, params=None):
+    """從連線池獲取連線，執行 SQL 查詢，然後將連線歸還至連線池"""
+    connection = connection_pool.get_connection()  # 取得連線
+    cursor = connection.cursor()
+
+    try:
+        cursor.execute(query, params)
+        result = cursor.fetchall()  # 取得查詢結果
+        connection.commit()  # 確保寫入資料庫
+        return result
+    except mysql.connector.Error as err:
+        print(f"資料庫錯誤: {err}")
+        connection.rollback()
+    finally:
+        cursor.close()
+        connection.close()  # 將連線歸還給連線池
+
+# 測試：查詢 users 表中的數據
+query = "SELECT * FROM users WHERE age > %s"
+params = (25, )
+result = execute_query(query, params)
+
+for row in result:
+    print(row)
+
+```
 ___
 
 # Task 5
