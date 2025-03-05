@@ -121,6 +121,7 @@ OOCSS（物件導向 CSS）是一種將 CSS 組織成可重用組件的命名方
 }
 
 ```
+
 * SMACSS（可擴展與模組化 CSS，Scalable and Modular Architecture for CSS）
 SMACSS 是一種將 CSS 分類為不同類別的架構，幫助我們組織 CSS，使其更容易擴展和維護。
 * 主要類別：
@@ -129,6 +130,32 @@ SMACSS 是一種將 CSS 分類為不同類別的架構，幫助我們組織 CSS�
     3. Module（模組樣式）：可重用的 UI 元件，如按鈕、卡片、導航欄等。
     4. State（狀態樣式）：描述元素的狀態，例如 .is-active、.is-hidden。
     5. Theme（主題樣式）（可選）：用於定義不同的主題樣式，如 .theme-dark、.theme-light。
+```css
+/* Base 樣式 */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Layout 佈局 */
+.l-header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+/* Module 模組 */
+.card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* State 狀態 */
+.is-active {
+    background-color: yellow;
+}
+```
+
 * BEM（區塊-元素-修飾符，Block-Element-Modifier）
 2. Tell us which naming guideline is your favorite, and give an example to demonstrate the main concept of that guideline. 
 For example, you can demo how to apply the OOCSS naming guideline to the CSS code in our week 1 tasks.
