@@ -215,8 +215,7 @@ Follow learning steps below to prepare your report:
 >`預設情況下，為了安全性，瀏覽器會限制來自不同來源的 JavaScript 直接存取其他網域的資源。CORS 允許伺服器設定特定的允許來源，從而開放 API 供其他網域存取。`
 2. Can we use the fetch function in our localhost page, to send a request to https://www.google.com/ and get a response?
 >`我們可以在本機端的網頁使用 fetch 函式，向 https://www.google.com/ 發送請求並獲取回應嗎？`  
->`不行，`
->`Google 並未開放 CORS 訪問，因此當我們在本機端使用 fetch 發送請求時，瀏覽器會攔截該請求，並顯示 CORS 錯誤訊息。`
+>`不行，Google 並未開放 CORS 訪問，因此當我們在本機端使用 fetch 發送請求時，瀏覽器會攔截該請求，並顯示 CORS 錯誤訊息。`
 ```javascript
 fetch("https://www.google.com/")
   .then(response => response.text())
@@ -229,6 +228,13 @@ fetch("https://www.google.com/")
 >`我們可以在本機端的網頁使用 fetch 函式，向上述網址發送請求並獲取回應嗎？與前一個案例相比，有什麼不同？`  
 >`可以。
 該 URL 屬於 GitHub Pages，並且其伺服器設定了允許跨域存取（CORS headers），所以我們可以成功獲取 JSON 資料。`
+```javascript
+fetch("https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assignment.json")
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error("Error:", error));
+```  
+>`與 Google 的情況不同，這個 API 伺服器有設定 Access-Control-Allow-Origin: *，允許來自任何網域的請求，因此我們能成功獲取回應。`
 4. How to share APIs we developed to other domains, just like what we experienced in
 step 3. Could you give us an example?
 
