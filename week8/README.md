@@ -189,7 +189,7 @@ BEM 是一種基於組件的命名規範，通過「區塊（Block）、元素�
 
 2. Tell us which naming guideline is your favorite, and give an example to demonstrate the main concept of that guideline. 
 For example, you can demo how to apply the OOCSS naming guideline to the CSS code in our week 1 tasks.
-
+我最喜歡 BEM，因為它的結構清晰，而且適用於現代前端框架（如 React、Vue）。BEM 讓我們更容易理解組件的組成，並且能夠很好地管理大型專案中的 CSS。
 
 
 # Topic 3
