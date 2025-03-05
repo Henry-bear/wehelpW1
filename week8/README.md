@@ -188,9 +188,20 @@ BEM 是一種基於組件的命名規範，通過「區塊（Block）、元素�
 ```
 
 2. Tell us which naming guideline is your favorite, and give an example to demonstrate the main concept of that guideline. 
-For example, you can demo how to apply the OOCSS naming guideline to the CSS code in our week 1 tasks.
+For example, you can demo how to apply the OOCSS naming guideline to the CSS code in our week 1 tasks.  
+
 我最喜歡 BEM，因為它的結構清晰，而且適用於現代前端框架（如 React、Vue）。BEM 讓我們更容易理解組件的組成，並且能夠很好地管理大型專案中的 CSS。
 
+## 總結
+| 命名方式 | 主要概念 | 適用場景 |
+| :---:|:---:|:---:|
+| OOCSS | 分離結構與外觀 |可重用 UI 元件，如按鈕、表單|
+| SMACSS | 將 CSS 分成 Base、Layout、Module、State、Theme | 大型專案，適合多人協作 |
+| BEM | Block、Element、Modifier 結構化命名 | 現代前端開發，如 React、Vue |
+
+📌 如果專案是大型企業網站，推薦使用 SMACSS。
+📌 如果正在開發前端框架（如 React/Vue）中的組件，推薦使用 BEM。
+📌 如果希望寫出可重用的 UI 樣式，推薦使用 OOCSS。
 
 # Topic 3
 **Fetch and CORS**
