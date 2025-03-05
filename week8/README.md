@@ -353,6 +353,21 @@ for row in result:
 2.從連線池取得連線，執行 SQL 操作。  
 3.操作完成後將連線歸還給連線池，確保連線能夠被其他請求重複使用。  
 #### 這種方式適用於高併發的應用場景，例如 API 服務或 Web 伺服器，以減少資料庫連線的開銷，提高整體吞吐量。
+
+### 連線池（Connection Pool） vs. ORM（使用資料庫引擎） 
+
+|特性|連線池（Connection Pool）|ORM（建立資料庫引擎）|
+| :---:|:---:|:---:|
+|概念|預先建立一組可重複使用的資料庫連線，減少每次建立連線的開銷|透過 Python 物件操作資料庫，避免直接寫 SQL|
+|開發方式|直接使用 SQL 查詢 (SELECT * FROM table)|透過 ORM 操作資料，例如 session.query(Member).all()|
+|效能|較高，因為直接使用 SQL，不需要額外轉換|稍慢，因為 ORM 需要將 Python 物件轉換成 SQL|
+|靈活度|高，可以針對資料庫最佳化 SQL 語法|較低，受 ORM 提供的功能限制|
+|可讀性|低，SQL 語句可能較難維護|高，使用 Python 物件管理資料，更直覺|
+|學習曲線|較簡單，熟悉 SQL 即可使用|較陡峭，需學習 ORM 框架如 SQLAlchemy|
+|適用場景|需要高效能、頻繁查詢大量數據時，如後端 API 服務|開發速度較重要、數據操作較簡單的專案，如企業內部系統|
+|常見工具|mysql-connector-python、pymysql	|SQLAlchemy、Django ORM|
+
+
 ___
 
 # Task 5
