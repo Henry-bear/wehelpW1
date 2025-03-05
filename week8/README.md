@@ -372,7 +372,8 @@ for row in result:
 | :---:|:---:|
 | 高效能需求（如 API、批量查詢）| 連線池（Connection Pool）| 
 | 開發速度較重要的專案（如 Django、Flask）| ORM（SQLAlchemy、Django ORM）| 
-| 大型專案（需要靈活性）| 混合使用 ORM + 連線池|   
+| 大型專案（需要靈活性）| 混合使用 ORM + 連線池|  
+
 👉 如果專案需要極致效能，用連線池。  
 👉 如果專案需要快速開發，用ORM。  
 👉 大多數實務上會混用 ORM 和 連線池，根據不同需求調整！ 🚀  
