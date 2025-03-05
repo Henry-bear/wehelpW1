@@ -237,6 +237,28 @@ fetch("https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assi
 >`與 Google 的情況不同，這個 API 伺服器有設定 Access-Control-Allow-Origin: *，允許來自任何網域的請求，因此我們能成功獲取回應。`
 4. How to share APIs we developed to other domains, just like what we experienced in
 step 3. Could you give us an example?
+>`如何讓我們開發的 API 允許其他網域存取？請舉例說明。`  
+>`如果我們想要讓自己開發的 API 能夠讓其他網域存取（如 GitHub Pages），我們需要在後端的 HTTP 回應標頭中加入 CORS 設定。在 FastAPI 中可以這樣做`
+```python
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+# 設定 CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # 允許所有網域訪問（可以改為指定的網域，如 ["https://example.com"]）
+    allow_credentials=True,
+    allow_methods=["*"],  # 允許所有 HTTP 方法
+    allow_headers=["*"],  # 允許所有標頭
+)
+
+@app.get("/data")
+async def get_data():
+    return {"message": "這是開放給其他網域的 API 資料"}
+```
+>`這樣，當其他網域的前端使用 fetch 發送請求時，就可以成功獲取資料，而不會遇到 CORS 限制。`
 
 ___
 
