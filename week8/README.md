@@ -199,8 +199,8 @@ For example, you can demo how to apply the OOCSS naming guideline to the CSS cod
 | SMACSS | 將 CSS 分成 Base、Layout、Module、State、Theme | 大型專案，適合多人協作 |
 | BEM | Block、Element、Modifier 結構化命名 | 現代前端開發，如 React、Vue |
 
-📌 如果專案是大型企業網站，推薦使用 SMACSS。
-📌 如果正在開發前端框架（如 React/Vue）中的組件，推薦使用 BEM。
+📌 如果專案是大型企業網站，推薦使用 SMACSS。  
+📌 如果正在開發前端框架（如 React/Vue）中的組件，推薦使用 BEM。  
 📌 如果希望寫出可重用的 UI 樣式，推薦使用 OOCSS。
 
 # Topic 3
