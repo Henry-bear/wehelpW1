@@ -274,14 +274,14 @@ Follow learning steps below to prepare your report:
     1. 連接資料庫（connect）
     2. 執行 SQL 語句（execute）
     3. 關閉連接（close）  
-### 然而，每次請求都建立與關閉連線會帶來額外的開銷，影響系統效能。
+#### 然而，每次請求都建立與關閉連線會帶來額外的開銷，影響系統效能。
 1. What is Connection Pool? Why do we want to use Connection Pool?  
 >`是一種用來管理資料庫連線的技術，它透過維持一組可重複使用的連線來優化效能，避免頻繁建立與關閉連線的成本。`
 * 使用連線池的優勢：
-    1.提高效能：重複使用連線，減少建立連線的時間。
-    2.減少資源消耗：降低資料庫伺服器的負擔，減少連線管理的開銷。
-    3.增加系統穩定性：避免大量即時連線導致資料庫崩潰或資源耗盡。
-    4.提高併發能力：允許多個請求共用同一組連線，提高吞吐量。`
+    1.提高效能：重複使用連線，減少建立連線的時間。  
+    2.減少資源消耗：降低資料庫伺服器的負擔，減少連線管理的開銷。  
+    3.增加系統穩定性：避免大量即時連線導致資料庫崩潰或資源耗盡。  
+    4.提高併發能力：允許多個請求共用同一組連線，提高吞吐量。  
 2. How to create a Connection Pool by the official mysql-connector-python package?
 
 3. If we want to make database operations, we get a connection from Connection Pool, execute SQL statements, and finally return connection back to the Connection Pool.Demo your code which implements the above procedure.
