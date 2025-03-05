@@ -346,6 +346,13 @@ for row in result:
     print(row)
 
 ```
+###結論  
+透過 mysql-connector-python 的 MySQLConnectionPool，我們可以有效管理資料庫連線，提升應用程式的效能與穩定性。  
+* 主要步驟包括：  
+1.建立連線池，設定 pool_name 和 pool_size。  
+2.從連線池取得連線，執行 SQL 操作。  
+3.操作完成後將連線歸還給連線池，確保連線能夠被其他請求重複使用。  
+####這種方式適用於高併發的應用場景，例如 API 服務或 Web 伺服器，以減少資料庫連線的開銷，提高整體吞吐量。
 ___
 
 # Task 5
