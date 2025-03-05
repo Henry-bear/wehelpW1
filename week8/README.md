@@ -270,6 +270,11 @@ ___
 
 Follow learning steps below to prepare your report:
 
+* 在與資料庫進行交互時，標準程序通常是：
+1. 連接資料庫（connect）
+2. 執行 SQL 語句（execute）
+3. 關閉連接（close）  
+然而，每次請求都建立與關閉連線會帶來額外的開銷，影響系統效能。
 1. What is Connection Pool? Why do we want to use Connection Pool?  
 >`是一種用來管理資料庫連線的技術，它透過維持一組可重複使用的連線來優化效能，避免頻繁建立與關閉連線的成本。`
 * 使用連線池的優勢：
