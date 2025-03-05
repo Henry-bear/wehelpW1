@@ -100,8 +100,29 @@ OOCSS（物件導向 CSS）是一種將 CSS 組織成可重用組件的命名方
         外觀（Skin）：負責元素的視覺風格，如 background-color、border、box-shadow 等。
     2. 使用可重用的類別：
         例如，使用 .btn 定義按鈕的結構，使用 .btn-primary、.btn-secondary 來定義不同的樣式，而不是為每個按鈕單獨寫樣式。
+```css
+/* 結構 (Structure) */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
 
-3. Tell us which naming guideline is your favorite, and give an example to demonstrate the main concept of that guideline. 
+/* 外觀 (Skin) */
+.btn-primary {
+    background-color: blue;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: gray;
+    color: white;
+}
+
+```
+
+2. Tell us which naming guideline is your favorite, and give an example to demonstrate the main concept of that guideline. 
 For example, you can demo how to apply the OOCSS naming guideline to the CSS code in our week 1 tasks.
 
 
