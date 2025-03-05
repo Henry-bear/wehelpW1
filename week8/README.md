@@ -157,6 +157,36 @@ body {
 ```
 
 * BEM（區塊-元素-修飾符，Block-Element-Modifier）
+BEM 是一種基於組件的命名規範，通過「區塊（Block）、元素（Element）、修飾符（Modifier）」的方式組織 CSS 代碼，使其更直觀可讀。
+* 命名規則：
+    1. Block（區塊）：代表獨立的組件，如 .menu、.button。
+    2. Element（元素）：區塊內的子元素，使用 __ 連接，如 .menu__item、.button__icon。
+    3. Modifier（修飾符）：用於改變區塊或元素的樣式，使用 -- 連接，如 .button--large、.menu__item--active。
+```css
+/* Block 區塊 */
+.card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Element 元素 */
+.card__title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card__content {
+    font-size: 14px;
+}
+
+/* Modifier 修飾符 */
+.card--highlight {
+    background-color: yellow;
+}
+
+```
+
 2. Tell us which naming guideline is your favorite, and give an example to demonstrate the main concept of that guideline. 
 For example, you can demo how to apply the OOCSS naming guideline to the CSS code in our week 1 tasks.
 
