@@ -156,7 +156,7 @@ body {
 }
 ```
 
-* BEM（區塊-元素-修飾符，Block-Element-Modifier）
+* BEM（區塊-元素-修飾符，Block-Element-Modifier）  
 BEM 是一種基於組件的命名規範，通過「區塊（Block）、元素（Element）、修飾符（Modifier）」的方式組織 CSS 代碼，使其更直觀可讀。
 * 命名規則：
     1. Block（區塊）：代表獨立的組件，如 .menu、.button。
