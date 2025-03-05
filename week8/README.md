@@ -91,7 +91,7 @@ Follow learning steps below to prepare your report:
 
 1. Introduce the concepts of OOCSS, SMACSS, and BEM naming guidelines.
 * OOCSS（物件導向 CSS，Object-Oriented CSS）  
-OOCSS（物件導向 CSS）是一種將 CSS 組織成可重用組件的命名方式。它的核心思想是分離結構（Structure）與外觀（Skin），這樣可以減少重複代碼並提高可維護性。
+>`OOCSS（物件導向 CSS）是一種將 CSS 組織成可重用組件的命名方式。它的核心思想是分離結構（Structure）與外觀（Skin），這樣可以減少重複代碼並提高可維護性。`
 
 * 主要原則：
 
@@ -123,7 +123,7 @@ OOCSS（物件導向 CSS）是一種將 CSS 組織成可重用組件的命名方
 ```
 
 * SMACSS（可擴展與模組化 CSS，Scalable and Modular Architecture for CSS）  
-SMACSS 是一種將 CSS 分類為不同類別的架構，幫助我們組織 CSS，使其更容易擴展和維護。
+>`SMACSS 是一種將 CSS 分類為不同類別的架構，幫助我們組織 CSS，使其更容易擴展和維護。`
 * 主要類別：
     1. Base（基礎樣式）：設定標籤的基本樣式，例如 body、h1、a 等。
     2. Layout（佈局樣式）：控制頁面區塊的佈局，例如 header、footer、sidebar。
@@ -157,7 +157,7 @@ body {
 ```
 
 * BEM（區塊-元素-修飾符，Block-Element-Modifier）  
-BEM 是一種基於組件的命名規範，通過「區塊（Block）、元素（Element）、修飾符（Modifier）」的方式組織 CSS 代碼，使其更直觀可讀。
+>`BEM 是一種基於組件的命名規範，通過「區塊（Block）、元素（Element）、修飾符（Modifier）」的方式組織 CSS 代碼，使其更直觀可讀。`
 * 命名規則：
     1. Block（區塊）：代表獨立的組件，如 .menu、.button。
     2. Element（元素）：區塊內的子元素，使用 __ 連接，如 .menu__item、.button__icon。
@@ -188,9 +188,8 @@ BEM 是一種基於組件的命名規範，通過「區塊（Block）、元素�
 ```
 
 2. Tell us which naming guideline is your favorite, and give an example to demonstrate the main concept of that guideline. 
-For example, you can demo how to apply the OOCSS naming guideline to the CSS code in our week 1 tasks.  
-
-我最喜歡 BEM，因為它的結構清晰，而且適用於現代前端框架（如 React、Vue）。BEM 讓我們更容易理解組件的組成，並且能夠很好地管理大型專案中的 CSS。
+For example, you can demo how to apply the OOCSS naming guideline to the CSS code in our week 1 tasks.    
+>`我最喜歡 BEM，因為它的結構清晰，而且適用於現代前端框架（如 React、Vue）。BEM 讓我們更容易理解組件的組成，並且能夠很好地管理大型專案中的 CSS。`
 
 ## 總結
 | 命名方式 | 主要概念 | 適用場景 |
