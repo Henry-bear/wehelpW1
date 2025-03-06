@@ -386,7 +386,16 @@ ___
 
 Follow learning steps below to prepare your report:
 1. What is XSS?
+>`
+跨站腳本攻擊（Cross-Site Scripting，簡稱 XSS）是一種網頁應用程式的安全漏洞，攻擊者可以通過注入惡意腳本（通常是 JavaScript）來影響其他使用者的瀏覽器行為。XSS 主要發生在網頁未正確過濾或轉義用戶輸入的情況下，可能導致以下風險：`
 
+1. 竊取用戶 Cookie：攻擊者可以利用 XSS 竊取受害者的身份驗證信息（如 Session ID），進而冒充受害者的帳戶進行操作。  
+2. 偽造頁面內容：攻擊者可注入惡意腳本，使受害者的瀏覽器顯示偽造資訊，如假登入頁面，誘騙用戶輸入帳號密碼。  
+3. 執行惡意操作：攻擊者可利用受害者的權限，在系統內執行操作，例如更改密碼、轉移資金等。  
+* 常見的 XSS 攻擊類型包括：
+    1. 儲存型 XSS（Stored XSS）：惡意腳本被儲存在伺服器端的數據庫或文件中，當其他用戶訪問時，腳本自動執行。
+    2. 反射型 XSS（Reflected XSS）：惡意腳本夾帶在 URL 參數或表單輸入中，並立即在伺服器回應時執行。
+    3. DOM 型 XSS（DOM-based XSS）：透過 JavaScript 在客戶端操作 DOM，進而執行惡意腳本。  
 2. You are a hacker! Design and do a real XSS attack on a web system. Show us your work.
 
 3. Based on the scenario you did in the previous step, how could it be prevented?
