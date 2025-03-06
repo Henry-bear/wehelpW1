@@ -397,8 +397,9 @@ Follow learning steps below to prepare your report:
     2. 反射型 XSS（Reflected XSS）：惡意腳本夾帶在 URL 參數或表單輸入中，並立即在伺服器回應時執行。
     3. DOM 型 XSS（DOM-based XSS）：透過 JavaScript 在客戶端操作 DOM，進而執行惡意腳本。
        
-2. You are a hacker! Design and do a real XSS attack on a web system. Show us your work.  
-### 假設有一個留言板系統，允許用戶發表評論，但未對輸入內容進行適當的過濾或轉義。   
+2. You are a hacker! Design and do a real XSS attack on a web system. Show us your work.   
+>`
+>假設有一個留言板系統，允許用戶發表評論，但未對輸入內容進行適當的過濾或轉義。`    
 * 在留言區輸入以下 XSS 惡意腳本：     
 ```javascrpit
 alert('這是一個 XSS 攻擊！');
